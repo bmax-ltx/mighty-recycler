@@ -1,0 +1,6 @@
+<resources>
+    <!-- Global -->
+    <string name="app_name">Mighty Recycler View</string>
+    <!-- Grid -->
+    <string name="grid_label">Grid</string>
+</resources>
