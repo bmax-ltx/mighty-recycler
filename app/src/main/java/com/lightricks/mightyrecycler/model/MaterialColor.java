@@ -1,4 +1,4 @@
-package com.lightricks.mightyrecycler.data;
+package com.lightricks.mightyrecycler.model;
 
 import android.graphics.Color;
 
