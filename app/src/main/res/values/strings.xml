@@ -1,6 +1,14 @@
 <resources>
     <!-- Global -->
     <string name="app_name">Mighty Recycler View</string>
-    <!-- Grid -->
-    <string name="grid_label">Grid</string>
+    <!-- Linear Layout -->
+    <string name="linear_layout_label">Linear Layout</string>
+    <!-- Grid Layout -->
+    <string name="grid_layout_label">Grid Layout</string>
+    <!-- Staggered Grid -->
+    <string name="staggered_grid_label">Staggered Grid</string>
+    <!-- Drag & Swipe -->
+    <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
+    <!-- Snap Helper -->
+    <string name="snap_helper">Snap Helper</string>
 </resources>

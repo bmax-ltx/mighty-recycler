@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.lightricks.mightyrecycler">
 
@@ -21,8 +22,23 @@
         </activity>
 
         <activity
-            android:name=".grid.GridActivity"
-            android:label="@string/grid_label"
+            android:name=".linear.LinearLayoutActivity"
+            android:label="@string/linear_layout_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".grid.GridLayoutActivity"
+            android:label="@string/grid_layout_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".staggered.StaggeredGridActivity"
+            android:label="@string/staggered_grid_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".drag.DragAndSwipeActivity"
+            android:label="@string/drag_n_swipe_label"
             android:parentActivityName=".home.HomeActivity"/>
 
     </application>

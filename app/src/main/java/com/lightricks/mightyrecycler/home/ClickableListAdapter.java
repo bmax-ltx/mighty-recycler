@@ -18,15 +18,23 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
     private List<String> labels = Collections.emptyList();
     private ClickListener clickListener;
 
+    /**
+     * Set the labels to display in the list.
+     */
     void setLabels(List<String> labels) {
         this.labels = labels;
 
         notifyDataSetChanged();
     }
 
+    /**
+     * Set the click listener for list items.
+     */
     void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
+
+    /** Adapter implementation */
 
     @NonNull
     @Override
@@ -55,6 +63,9 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
         void onClick(int position, String label);
     }
 
+    /**
+     * Clickable list item view holder
+     */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final ClickableListItemBinding dataBinding;
 
