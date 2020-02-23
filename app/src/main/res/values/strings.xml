@@ -10,5 +10,5 @@
     <!-- Drag & Swipe -->
     <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
     <!-- Snap Helper -->
-    <string name="snap_helper">Snap Helper</string>
+    <string name="snap_helper_label">Snap Helper</string>
 </resources>

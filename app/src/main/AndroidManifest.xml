@@ -41,6 +41,11 @@
             android:label="@string/drag_n_swipe_label"
             android:parentActivityName=".home.HomeActivity"/>
 
+        <activity
+            android:name=".snap.SnapHelperActivity"
+            android:label="@string/snap_helper_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
     </application>
 
 </manifest>

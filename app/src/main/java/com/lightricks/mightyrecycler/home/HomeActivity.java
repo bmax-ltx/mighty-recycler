@@ -14,6 +14,7 @@ import com.lightricks.mightyrecycler.databinding.ActivityHomeBinding;
 import com.lightricks.mightyrecycler.drag.DragAndSwipeActivity;
 import com.lightricks.mightyrecycler.grid.GridLayoutActivity;
 import com.lightricks.mightyrecycler.linear.LinearLayoutActivity;
+import com.lightricks.mightyrecycler.snap.SnapHelperActivity;
 import com.lightricks.mightyrecycler.staggered.StaggeredGridActivity;
 
 import java.util.List;
@@ -27,6 +28,7 @@ public class HomeActivity extends AppCompatActivity {
             R.string.grid_layout_label,
             R.string.staggered_grid_label,
             R.string.drag_n_swipe_label,
+            R.string.snap_helper_label,
     };
 
     private Class[] activityClasses = new Class[] {
@@ -34,6 +36,7 @@ public class HomeActivity extends AppCompatActivity {
             GridLayoutActivity.class,
             StaggeredGridActivity.class,
             DragAndSwipeActivity.class,
+            SnapHelperActivity.class,
     };
 
     private ActivityHomeBinding dataBinding;
