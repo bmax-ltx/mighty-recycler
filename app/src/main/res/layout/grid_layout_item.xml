@@ -7,7 +7,7 @@
     <data>
         <variable
             name="color"
-            type="com.lightricks.mightyrecycler.data.MaterialColor" />
+            type="com.lightricks.mightyrecycler.model.MaterialColor" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

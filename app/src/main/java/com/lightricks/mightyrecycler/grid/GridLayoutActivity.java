@@ -8,18 +8,18 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.data.MaterialColors;
-import com.lightricks.mightyrecycler.databinding.ActivityGridBinding;
+import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.databinding.ActivityGridLayoutBinding;
 
-public class GridActivity extends AppCompatActivity {
+public class GridLayoutActivity extends AppCompatActivity {
 
-    private ActivityGridBinding dataBinding;
+    private ActivityGridLayoutBinding dataBinding;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    protected void onCreate(Bundle state) {
+        super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_grid);
+        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_grid_layout);
         setupViews();
     }
 
@@ -30,7 +30,7 @@ public class GridActivity extends AppCompatActivity {
     }
 
     private RecyclerView.Adapter makeAdapter() {
-        GridAdapter adapter = new GridAdapter();
+        GridLayoutAdapter adapter = new GridLayoutAdapter();
         MaterialColors colors = new MaterialColors();
         adapter.setColors(colors.getRandomColors(100));
         return adapter;
