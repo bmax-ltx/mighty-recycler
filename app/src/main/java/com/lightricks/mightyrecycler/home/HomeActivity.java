@@ -27,16 +27,16 @@ public class HomeActivity extends AppCompatActivity {
             R.string.linear_layout_label,
             R.string.grid_layout_label,
             R.string.staggered_grid_label,
-            R.string.drag_n_swipe_label,
             R.string.snap_helper_label,
+            R.string.drag_n_swipe_label,
     };
 
     private Class[] activityClasses = new Class[] {
             LinearLayoutActivity.class,
             GridLayoutActivity.class,
             StaggeredGridActivity.class,
-            DragAndSwipeActivity.class,
             SnapHelperActivity.class,
+            DragAndSwipeActivity.class,
     };
 
     private ActivityHomeBinding dataBinding;
