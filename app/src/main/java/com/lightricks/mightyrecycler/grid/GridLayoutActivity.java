@@ -27,6 +27,8 @@ public class GridLayoutActivity extends AppCompatActivity {
         dataBinding.recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.setAdapter(makeAdapter());
+        int space = getResources().getDimensionPixelSize(R.dimen.grid_spacing);
+        dataBinding.recyclerView.addItemDecoration(new SpacesItemDecoration(space));
     }
 
     private RecyclerView.Adapter makeAdapter() {

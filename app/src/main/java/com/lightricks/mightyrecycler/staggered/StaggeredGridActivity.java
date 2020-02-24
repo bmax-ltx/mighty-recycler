@@ -25,7 +25,6 @@ public class StaggeredGridActivity extends AppCompatActivity {
     private void setupViews() {
         dataBinding.recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,
                 StaggeredGridLayoutManager.VERTICAL));
-        dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 

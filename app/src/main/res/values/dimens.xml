@@ -2,4 +2,6 @@
 <resources>
     <!-- Global -->
     <dimen name="layout_margin">12dp</dimen>
+    <!-- Grid Layout -->
+    <dimen name="grid_spacing">2dp</dimen>
 </resources>
