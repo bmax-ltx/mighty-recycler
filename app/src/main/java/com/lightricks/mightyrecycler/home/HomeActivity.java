@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -54,6 +55,9 @@ public class HomeActivity extends AppCompatActivity {
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,
                 RecyclerView.VERTICAL));
+        int width = getResources().getDimensionPixelSize(R.dimen.sideline_width);
+        int color = ContextCompat.getColor(this, R.color.colorAccent);
+        dataBinding.recyclerView.addItemDecoration(new SidelineDecoration(width, color));
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
