@@ -1,9 +1,7 @@
-package com.lightricks.mightyrecycler.home;
+package com.lightricks.mightyrecycler.decoration;
 
 import android.graphics.Canvas;
-import android.graphics.DashPathEffect;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Rect;
 import android.view.View;
 
@@ -12,29 +10,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 public class SidelineDecoration extends RecyclerView.ItemDecoration {
     private Paint sidelinePaint;
-    private Path sidelinePath;
-    private int decorationWidth;
+    private int decorationWidth, circleRadius;
 
     SidelineDecoration(int width, int color) {
         decorationWidth = width;
 
         sidelinePaint = new Paint();
-        sidelinePaint.setStyle(Paint.Style.STROKE);
-        sidelinePaint.setStrokeWidth(width);
-        sidelinePaint.setStrokeJoin(Paint.Join.ROUND);
-        sidelinePaint.setStrokeCap(Paint.Cap.ROUND);
+        sidelinePaint.setStyle(Paint.Style.FILL_AND_STROKE);
+        sidelinePaint.setStrokeWidth(width / 4);
         sidelinePaint.setAntiAlias(true);
         sidelinePaint.setColor(color);
-        float[] intervals = new float[]{1, width * 4 / 3};
-        sidelinePaint.setPathEffect(new DashPathEffect(intervals, 0));
 
-        sidelinePath = new Path();
+        circleRadius = width / 4;
     }
 
     @Override
     public void getItemOffsets(Rect outRect, @NonNull View view, @NonNull RecyclerView parent,
                                @NonNull RecyclerView.State state) {
         outRect.left = decorationWidth;
+        outRect.right = decorationWidth;
     }
 
     @Override
@@ -55,25 +49,22 @@ public class SidelineDecoration extends RecyclerView.ItemDecoration {
             final float stopX;
             startX = stopX = left + decorationWidth / 2;
 
-            final int offset = decorationWidth / 2;
-
             final float startY;
             final float stopY;
             if (isFirst) {
                 startY = middle;
                 stopY = bottom;
+                canvas.drawCircle(startX, startY, circleRadius, sidelinePaint);
             } else if (isLast) {
-                startY = top + offset;
+                startY = top;
                 stopY = middle;
+                canvas.drawCircle(stopX, stopY, circleRadius, sidelinePaint);
             } else {
-                startY = top + offset;
+                startY = top;
                 stopY = bottom;
             }
 
-            sidelinePath.reset();
-            sidelinePath.moveTo(startX, startY);
-            sidelinePath.lineTo(stopX, stopY);
-            canvas.drawPath(sidelinePath, sidelinePaint);
+            canvas.drawLine(startX, startY, stopX, stopY, sidelinePaint);
         }
     }
 }

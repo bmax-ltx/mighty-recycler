@@ -37,13 +37,43 @@
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
+            android:name=".snap.SnapHelperActivity"
+            android:label="@string/snap_helper_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
             android:name=".drag.DragAndSwipeActivity"
             android:label="@string/drag_n_swipe_label"
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".snap.SnapHelperActivity"
-            android:label="@string/snap_helper_label"
+            android:name=".decoration.ItemDecorationActivity"
+            android:label="@string/item_decoration_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".animator.ItemAnimatorActivity"
+            android:label="@string/item_animator_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".diffs.DiffUtilActivity"
+            android:label="@string/diff_util_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".sections.ViewTypesActivity"
+            android:label="@string/view_types_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".payload.PartialBindActivity"
+            android:label="@string/partial_bind_label"
+            android:parentActivityName=".home.HomeActivity"/>
+
+        <activity
+            android:name=".nested.NestedScrollingActivity"
+            android:label="@string/nested_scrolling_label"
             android:parentActivityName=".home.HomeActivity"/>
 
     </application>

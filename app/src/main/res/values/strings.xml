@@ -7,8 +7,20 @@
     <string name="grid_layout_label">Grid Layout</string>
     <!-- Staggered Grid -->
     <string name="staggered_grid_label">Staggered Grid</string>
-    <!-- Drag & Swipe -->
-    <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
     <!-- Snap Helper -->
     <string name="snap_helper_label">Snap Helper</string>
+    <!-- Drag & Swipe -->
+    <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
+    <!-- Item Decoration -->
+    <string name="item_decoration_label">Item Decoration</string>
+    <!-- Item Animator -->
+    <string name="item_animator_label">Item Animator</string>
+    <!-- Diff Util -->
+    <string name="diff_util_label">Diff Util</string>
+    <!-- View Types -->
+    <string name="view_types_label">View Types</string>
+    <!-- Partial Bind -->
+    <string name="partial_bind_label">Partial Bind</string>
+    <!-- Nested Scrolling -->
+    <string name="nested_scrolling_label">Nested Scrolling</string>
 </resources>

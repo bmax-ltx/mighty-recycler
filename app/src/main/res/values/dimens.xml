@@ -3,7 +3,7 @@
     <!-- Global -->
     <dimen name="layout_margin">12dp</dimen>
     <!-- Home Screen -->
-    <dimen name="sideline_width">8dp</dimen>
+    <dimen name="sideline_width">24dp</dimen>
     <!-- Grid Layout -->
     <dimen name="grid_spacing">2dp</dimen>
 </resources>

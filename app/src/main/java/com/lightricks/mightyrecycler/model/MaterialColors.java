@@ -3,6 +3,7 @@ package com.lightricks.mightyrecycler.model;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
@@ -41,5 +42,11 @@ public class MaterialColors {
                 .limit(n)
                 .mapToObj(allColors::get)
                 .collect(toList());
+    }
+
+    public List<MaterialColor> getNColors(int n) {
+        return allColors.stream()
+                .limit(n)
+                .collect(Collectors.toList());
     }
 }

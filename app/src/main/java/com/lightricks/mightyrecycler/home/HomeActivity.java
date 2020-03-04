@@ -4,17 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
+import com.lightricks.mightyrecycler.animator.ItemAnimatorActivity;
 import com.lightricks.mightyrecycler.databinding.ActivityHomeBinding;
+import com.lightricks.mightyrecycler.decoration.ItemDecorationActivity;
+import com.lightricks.mightyrecycler.diffs.DiffUtilActivity;
 import com.lightricks.mightyrecycler.drag.DragAndSwipeActivity;
 import com.lightricks.mightyrecycler.grid.GridLayoutActivity;
 import com.lightricks.mightyrecycler.linear.LinearLayoutActivity;
+import com.lightricks.mightyrecycler.nested.NestedScrollingActivity;
+import com.lightricks.mightyrecycler.payload.PartialBindActivity;
+import com.lightricks.mightyrecycler.sections.ViewTypesActivity;
 import com.lightricks.mightyrecycler.snap.SnapHelperActivity;
 import com.lightricks.mightyrecycler.staggered.StaggeredGridActivity;
 
@@ -30,6 +35,12 @@ public class HomeActivity extends AppCompatActivity {
             R.string.staggered_grid_label,
             R.string.snap_helper_label,
             R.string.drag_n_swipe_label,
+            R.string.item_decoration_label,
+            R.string.item_animator_label,
+            R.string.diff_util_label,
+            R.string.view_types_label,
+            R.string.partial_bind_label,
+            R.string.nested_scrolling_label,
     };
 
     private Class[] activityClasses = new Class[] {
@@ -38,6 +49,12 @@ public class HomeActivity extends AppCompatActivity {
             StaggeredGridActivity.class,
             SnapHelperActivity.class,
             DragAndSwipeActivity.class,
+            ItemDecorationActivity.class,
+            ItemAnimatorActivity.class,
+            DiffUtilActivity.class,
+            ViewTypesActivity.class,
+            PartialBindActivity.class,
+            NestedScrollingActivity.class,
     };
 
     private ActivityHomeBinding dataBinding;
@@ -55,9 +72,6 @@ public class HomeActivity extends AppCompatActivity {
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,
                 RecyclerView.VERTICAL));
-        int width = getResources().getDimensionPixelSize(R.dimen.sideline_width);
-        int color = ContextCompat.getColor(this, R.color.colorAccent);
-        dataBinding.recyclerView.addItemDecoration(new SidelineDecoration(width, color));
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
