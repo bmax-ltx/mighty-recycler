@@ -11,25 +11,25 @@ public class MaterialColors {
     private Random random = new Random();
 
     public MaterialColors() {
-        allColors.add(new MaterialColor("Red", "#B71C1C"));
-        allColors.add(new MaterialColor("Pink", "#880E4F"));
-        allColors.add(new MaterialColor("Purple", "#4A148C"));
-        allColors.add(new MaterialColor("Deep Purple", "#311B92"));
-        allColors.add(new MaterialColor("Indigo", "#1A237E"));
-        allColors.add(new MaterialColor("Blue", "#0D47A1"));
-        allColors.add(new MaterialColor("Light Blue", "#01579B"));
-        allColors.add(new MaterialColor("Cyan", "#006064"));
-        allColors.add(new MaterialColor("Teal", "#004D40"));
-        allColors.add(new MaterialColor("Green", "#1B5E20"));
-        allColors.add(new MaterialColor("Light Green", "#33691E"));
+        allColors.add(new MaterialColor("Red", "#F44336"));
+        allColors.add(new MaterialColor("Pink", "#E91E63"));
+        allColors.add(new MaterialColor("Purple", "#9C27B0"));
+        allColors.add(new MaterialColor("Deep Purple", "#673AB7"));
+        allColors.add(new MaterialColor("Indigo", "#3F51B5"));
+        allColors.add(new MaterialColor("Blue", "#1E88E5"));
+        allColors.add(new MaterialColor("Light Blue", "#0288D1"));
+        allColors.add(new MaterialColor("Cyan", "#0097A7"));
+        allColors.add(new MaterialColor("Teal", "#009688"));
+        allColors.add(new MaterialColor("Green", "#43A047"));
+        allColors.add(new MaterialColor("Light Green", "#558B2F"));
         allColors.add(new MaterialColor("Lime", "#827717"));
         allColors.add(new MaterialColor("Yellow", "#F57F17"));
         allColors.add(new MaterialColor("Amber", "#FF6F00"));
         allColors.add(new MaterialColor("Orange", "#E65100"));
-        allColors.add(new MaterialColor("Deep Orange", "#BF360C"));
-        allColors.add(new MaterialColor("Brown", "#3E2723"));
-        allColors.add(new MaterialColor("Gray", "#212121"));
-        allColors.add(new MaterialColor("Blue Gray", "#263238"));
+        allColors.add(new MaterialColor("Deep Orange", "#F4511E"));
+        allColors.add(new MaterialColor("Brown", "#795548"));
+        allColors.add(new MaterialColor("Gray", "#757575"));
+        allColors.add(new MaterialColor("Blue Gray", "#607D8B"));
     }
 
     public List<MaterialColor> getAllColors() {

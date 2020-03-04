@@ -26,7 +26,6 @@
             android:gravity="center"
             android:text="@{color.name}"
             android:background="@{color.colorInt}"
-            android:alpha="0.8"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
