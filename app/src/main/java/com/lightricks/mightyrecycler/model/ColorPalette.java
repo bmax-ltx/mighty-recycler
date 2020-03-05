@@ -7,11 +7,11 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
-public class MaterialColors {
+public class ColorPalette {
     private List<MaterialColor> allColors = new ArrayList<>();
     private Random random = new Random();
 
-    public MaterialColors() {
+    public ColorPalette() {
         allColors.add(new MaterialColor("Red", "#F44336"));
         allColors.add(new MaterialColor("Pink", "#E91E63"));
         allColors.add(new MaterialColor("Purple", "#9C27B0"));

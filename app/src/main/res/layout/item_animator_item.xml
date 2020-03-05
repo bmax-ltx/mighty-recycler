@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="color"
+            type="com.lightricks.mightyrecycler.model.MaterialColor" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrains_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="0dp"
+            android:layout_height="64dp"
+            android:textColor="@android:color/white"
+            android:textAppearance="@android:style/TextAppearance.Large"
+            android:gravity="center"
+            android:text="@{color.name}"
+            android:background="@{color.colorInt}"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:background="@color/colorPrimary"
+            tools:text="Teal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

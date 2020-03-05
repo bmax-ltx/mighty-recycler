@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.model.ColorPalette;
 import com.lightricks.mightyrecycler.databinding.ActivityGridLayoutBinding;
 
 public class GridLayoutActivity extends AppCompatActivity {
@@ -33,8 +33,8 @@ public class GridLayoutActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter makeAdapter() {
         GridLayoutAdapter adapter = new GridLayoutAdapter();
-        MaterialColors colors = new MaterialColors();
-        adapter.setColors(colors.getRandomColors(100));
+        ColorPalette palette = new ColorPalette();
+        adapter.setColors(palette.getRandomColors(100));
         return adapter;
     }
 }

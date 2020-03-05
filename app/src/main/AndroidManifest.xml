@@ -57,11 +57,6 @@
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".diffs.DiffUtilActivity"
-            android:label="@string/diff_util_label"
-            android:parentActivityName=".home.HomeActivity"/>
-
-        <activity
             android:name=".sections.ViewTypesActivity"
             android:label="@string/view_types_label"
             android:parentActivityName=".home.HomeActivity"/>

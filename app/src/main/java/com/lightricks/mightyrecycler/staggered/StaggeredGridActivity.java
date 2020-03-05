@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityStaggeredGridBinding;
-import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.model.ColorPalette;
 
 public class StaggeredGridActivity extends AppCompatActivity {
     private ActivityStaggeredGridBinding dataBinding;
@@ -30,8 +30,8 @@ public class StaggeredGridActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter makeAdapter() {
         StaggeredGridAdapter adapter = new StaggeredGridAdapter();
-        MaterialColors colors = new MaterialColors();
-        adapter.setColors(colors.getRandomColors(150));
+        ColorPalette palette = new ColorPalette();
+        adapter.setColors(palette.getRandomColors(150));
         return adapter;
     }
 

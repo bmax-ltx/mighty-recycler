@@ -13,7 +13,7 @@ import androidx.recyclerview.widget.SnapHelper;
 
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivitySnapHelperBinding;
-import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.model.ColorPalette;
 
 public class SnapHelperActivity extends AppCompatActivity {
     private ActivitySnapHelperBinding dataBinding;
@@ -50,8 +50,8 @@ public class SnapHelperActivity extends AppCompatActivity {
 
     private RecyclerView.Adapter makeAdapter() {
         SnapHelperAdapter adapter = new SnapHelperAdapter();
-        MaterialColors colors = new MaterialColors();
-        adapter.setColors(colors.getRandomColors(100));
+        ColorPalette palette = new ColorPalette();
+        adapter.setColors(palette.getRandomColors(100));
         return adapter;
     }
 

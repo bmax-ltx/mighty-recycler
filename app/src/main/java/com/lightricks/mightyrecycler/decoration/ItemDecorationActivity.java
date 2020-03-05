@@ -6,10 +6,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityItemDecorationBinding;
-import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.model.ColorPalette;
 
 public class ItemDecorationActivity extends AppCompatActivity {
     private ActivityItemDecorationBinding dataBinding;
@@ -33,10 +34,10 @@ public class ItemDecorationActivity extends AppCompatActivity {
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
-    private ItemDecorationAdapter makeAdapter() {
+    private RecyclerView.Adapter makeAdapter() {
         ItemDecorationAdapter adapter = new ItemDecorationAdapter();
-        MaterialColors colors = new MaterialColors();
-        adapter.setColors(colors.getNColors(5));
+        ColorPalette palette = new ColorPalette();
+        adapter.setColors(palette.getNColors(5));
         return adapter;
     }
 }

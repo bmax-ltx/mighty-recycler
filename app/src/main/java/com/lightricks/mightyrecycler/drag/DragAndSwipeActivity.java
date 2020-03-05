@@ -5,13 +5,12 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.model.MaterialColors;
+import com.lightricks.mightyrecycler.model.ColorPalette;
 import com.lightricks.mightyrecycler.databinding.ActivityDragSwipeBinding;
 
 public class DragAndSwipeActivity extends AppCompatActivity {
@@ -28,9 +27,6 @@ public class DragAndSwipeActivity extends AppCompatActivity {
     private void setupViews() {
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
-        dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.VERTICAL));
-
         DragAndSwipeAdapter adapter = makeAdapter();
         dataBinding.recyclerView.setAdapter(adapter);
 
@@ -59,8 +55,8 @@ public class DragAndSwipeActivity extends AppCompatActivity {
 
     private DragAndSwipeAdapter makeAdapter() {
         DragAndSwipeAdapter adapter = new DragAndSwipeAdapter();
-        MaterialColors colors = new MaterialColors();
-        adapter.setColors(colors.getRandomColors(100));
+        ColorPalette palette = new ColorPalette();
+        adapter.setColors(palette.getRandomColors(100));
         return adapter;
     }
 }

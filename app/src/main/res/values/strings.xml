@@ -15,8 +15,8 @@
     <string name="item_decoration_label">Item Decoration</string>
     <!-- Item Animator -->
     <string name="item_animator_label">Item Animator</string>
-    <!-- Diff Util -->
-    <string name="diff_util_label">Diff Util</string>
+    <string name="add_label">Add</string>
+    <string name="remove_label">Remove</string>
     <!-- View Types -->
     <string name="view_types_label">View Types</string>
     <!-- Partial Bind -->
