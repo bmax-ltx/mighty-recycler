@@ -1,6 +1,7 @@
 package com.lightricks.mightyrecycler.nested;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -11,10 +12,14 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityNestedScrollBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+import java.util.Objects;
+
 /**
  * Activity showing the Nested Scroll screen
  */
 public class NestedScrollActivity extends AppCompatActivity {
+    private ActivityNestedScrollBinding dataBinding;
+
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
@@ -22,9 +27,16 @@ public class NestedScrollActivity extends AppCompatActivity {
         setupViews();
     }
 
+    public void handleButtonClick(View view) {
+        boolean wasEnabled = dataBinding.recyclerView.isNestedScrollingEnabled();
+        dataBinding.recyclerView.setNestedScrollingEnabled(!wasEnabled);
+    }
+
     private void setupViews() {
-        ActivityNestedScrollBinding dataBinding =
-                DataBindingUtil.setContentView(this, R.layout.activity_nested_scroll);
+        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_nested_scroll);
+
+        setSupportActionBar(dataBinding.toolbar);
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
 
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);

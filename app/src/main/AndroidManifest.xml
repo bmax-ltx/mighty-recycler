@@ -69,7 +69,8 @@
         <activity
             android:name=".nested.NestedScrollActivity"
             android:label="@string/nested_scrolling_label"
-            android:parentActivityName=".home.HomeActivity"/>
+            android:parentActivityName=".home.HomeActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
 
     </application>
 
