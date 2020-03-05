@@ -40,6 +40,7 @@ public class NestedScrollActivity extends AppCompatActivity {
 
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
+        dataBinding.recyclerView.setNestedScrollingEnabled(false);
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
