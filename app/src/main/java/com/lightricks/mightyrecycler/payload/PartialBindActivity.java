@@ -29,8 +29,8 @@ public class PartialBindActivity extends AppCompatActivity {
 
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
-        dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.VERTICAL));
+        dataBinding.recyclerView.addItemDecoration(
+                new DividerItemDecoration(this, RecyclerView.VERTICAL));
 
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }

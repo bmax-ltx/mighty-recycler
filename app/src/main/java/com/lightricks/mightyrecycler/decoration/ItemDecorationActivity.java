@@ -32,7 +32,7 @@ public class ItemDecorationActivity extends AppCompatActivity {
 
         int width = getResources().getDimensionPixelSize(R.dimen.sideline_width);
         int color = ContextCompat.getColor(this, R.color.colorPrimary);
-        dataBinding.recyclerView.addItemDecoration(new StepperDecoration(width, color));
+        dataBinding.recyclerView.addItemDecoration(new StepperItemDecoration(width, color));
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 

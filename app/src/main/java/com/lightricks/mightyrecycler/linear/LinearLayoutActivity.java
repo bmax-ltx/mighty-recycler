@@ -30,15 +30,18 @@ public class LinearLayoutActivity extends AppCompatActivity {
         // Top Recycler View
         dataBinding.recyclerViewTop.setLayoutManager(
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        dataBinding.recyclerViewTop.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.HORIZONTAL));
+
+        dataBinding.recyclerViewTop.addItemDecoration(
+                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+
         dataBinding.recyclerViewTop.setHasFixedSize(true);
         dataBinding.recyclerViewTop.setAdapter(makeAdapter());
 
         // Bottom Recycler View
         dataBinding.recyclerViewBottom.setLayoutManager(new LinearLayoutManager(this));
-        dataBinding.recyclerViewBottom.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.VERTICAL));
+        dataBinding.recyclerViewBottom.addItemDecoration(
+                new DividerItemDecoration(this, RecyclerView.VERTICAL));
+
         dataBinding.recyclerViewBottom.setHasFixedSize(true);
         dataBinding.recyclerViewBottom.setAdapter(makeAdapter());
     }
