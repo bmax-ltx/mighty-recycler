@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityStaggeredGridBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
+import com.lightricks.mightyrecycler.util.OffsetItemDecoration;
 
 /**
  * Activity showing the Staggered Grid Layout screen
@@ -29,6 +30,8 @@ public class StaggeredGridActivity extends AppCompatActivity {
         dataBinding.recyclerView.setLayoutManager(
                 new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
 
+        int space = getResources().getDimensionPixelSize(R.dimen.grid_spacing);
+        dataBinding.recyclerView.addItemDecoration(new OffsetItemDecoration(space));
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 

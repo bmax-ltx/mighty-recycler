@@ -24,7 +24,7 @@ public class ItemAnimatorViewModel extends ViewModel {
 
     public ItemAnimatorViewModel() {
         maxColors = palette.getAllColors().size();
-        numColors = maxColors / 3;
+        numColors = maxColors / 4;
         materialColors.setValue(palette.getNColors(numColors));
         isAddButtonEnabled.setValue(true);
         isRemoveButtonEnabled.setValue(true);

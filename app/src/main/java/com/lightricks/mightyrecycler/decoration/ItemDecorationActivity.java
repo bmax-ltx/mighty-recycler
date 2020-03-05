@@ -39,7 +39,7 @@ public class ItemDecorationActivity extends AppCompatActivity {
     private RecyclerView.Adapter makeAdapter() {
         ItemDecorationAdapter adapter = new ItemDecorationAdapter();
         ColorPalette palette = new ColorPalette();
-        adapter.setColors(palette.getNColors(5));
+        adapter.setColors(palette.getNColors(6));
         return adapter;
     }
 }
