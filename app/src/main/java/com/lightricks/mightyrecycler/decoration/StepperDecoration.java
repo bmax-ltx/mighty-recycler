@@ -8,16 +8,16 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class SidelineDecoration extends RecyclerView.ItemDecoration {
+public class StepperDecoration extends RecyclerView.ItemDecoration {
     private Paint sidelinePaint;
     private int decorationWidth, circleRadius;
 
-    SidelineDecoration(int width, int color) {
+    StepperDecoration(int width, int color) {
         decorationWidth = width;
 
         sidelinePaint = new Paint();
         sidelinePaint.setStyle(Paint.Style.FILL_AND_STROKE);
-        sidelinePaint.setStrokeWidth(width / 4);
+        sidelinePaint.setStrokeWidth(width / 8);
         sidelinePaint.setAntiAlias(true);
         sidelinePaint.setColor(color);
 
@@ -62,6 +62,7 @@ public class SidelineDecoration extends RecyclerView.ItemDecoration {
             } else {
                 startY = top;
                 stopY = bottom;
+                canvas.drawCircle(startX, middle, circleRadius, sidelinePaint);
             }
 
             canvas.drawLine(startX, startY, stopX, stopY, sidelinePaint);
