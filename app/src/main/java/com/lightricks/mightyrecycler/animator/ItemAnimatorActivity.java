@@ -31,7 +31,7 @@ public class ItemAnimatorActivity extends AppCompatActivity {
         viewModel.getMaterialColors()
                 .observe(this, colors -> {
                     adapter.setColors(colors);
-                    int lastPosition = colors.size() - 1;
+                    int lastPosition = adapter.getItemCount() - 1;
                     dataBinding.recyclerView.scrollToPosition(lastPosition);
                 });
     }

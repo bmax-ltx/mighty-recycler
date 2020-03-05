@@ -19,6 +19,24 @@ public class ItemAnimatorAdapter extends RecyclerView.Adapter<ItemAnimatorAdapte
     private List<MaterialColor> colors = new ArrayList<>();
 
     /**
+     * Append the given color to the end of the list.
+     */
+    void appendColor(MaterialColor color) {
+        int position = colors.size();
+        colors.add(color);
+        notifyItemInserted(position);
+    }
+
+    /**
+     * Remove the last item from the list.
+     */
+    void removeLastColor() {
+        int last = colors.size() - 1;
+        colors.remove(last);
+        notifyItemRemoved(last);
+    }
+
+    /**
      * Set the colors to display in the list.
      */
     void setColors(List<MaterialColor> newColors) {
