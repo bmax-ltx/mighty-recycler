@@ -42,7 +42,7 @@ public class ItemAnimatorActivity extends AppCompatActivity {
         dataBinding.setVm(viewModel);
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
-        dataBinding.recyclerView.setItemAnimator(new ItemSlideAnimator());
+        dataBinding.recyclerView.setItemAnimator(new ItemScaleAnimator());
         dataBinding.recyclerView.setAdapter(adapter);
     }
 }
