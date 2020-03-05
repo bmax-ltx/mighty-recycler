@@ -1,6 +1,6 @@
 <resources>
     <!-- Global -->
-    <string name="app_name">Mighty Recycler View</string>
+    <string name="app_name">The Mighty Recycler View</string>
     <!-- Linear Layout -->
     <string name="linear_layout_label">Linear Layout</string>
     <!-- Grid Layout -->

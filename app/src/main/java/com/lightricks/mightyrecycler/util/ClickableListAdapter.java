@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.ClickableListItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemClickableListBinding;
 
 import java.util.Collections;
 import java.util.List;
@@ -43,7 +43,7 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.clickable_list_item, parent, false));
+                R.layout.item_clickable_list, parent, false));
     }
 
     @Override
@@ -73,9 +73,9 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
      * View holder for Clickable list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final ClickableListItemBinding dataBinding;
+        private final ItemClickableListBinding dataBinding;
 
-        ViewHolder(@NonNull ClickableListItemBinding dataBinding) {
+        ViewHolder(@NonNull ItemClickableListBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

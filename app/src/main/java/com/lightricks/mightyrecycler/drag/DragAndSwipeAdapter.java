@@ -8,8 +8,8 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
+import com.lightricks.mightyrecycler.databinding.ItemDragSwipeBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
-import com.lightricks.mightyrecycler.databinding.DragSwipeItemBinding;
 
 import java.util.Collections;
 import java.util.List;
@@ -64,7 +64,7 @@ public class DragAndSwipeAdapter extends RecyclerView.Adapter<DragAndSwipeAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.drag_swipe_item, parent, false));
+                R.layout.item_drag_swipe, parent, false));
     }
 
     @Override
@@ -82,9 +82,9 @@ public class DragAndSwipeAdapter extends RecyclerView.Adapter<DragAndSwipeAdapte
      * View holder for Drag & Swipe list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final DragSwipeItemBinding dataBinding;
+        private final ItemDragSwipeBinding dataBinding;
 
-        ViewHolder(DragSwipeItemBinding dataBinding) {
+        ViewHolder(ItemDragSwipeBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

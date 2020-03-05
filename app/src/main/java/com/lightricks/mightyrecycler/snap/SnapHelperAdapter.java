@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.SnapHelperItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemSnapHelperBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -35,7 +35,7 @@ public class SnapHelperAdapter extends RecyclerView.Adapter<SnapHelperAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.snap_helper_item, parent, false));
+                R.layout.item_snap_helper, parent, false));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class SnapHelperAdapter extends RecyclerView.Adapter<SnapHelperAdapter.Vi
      * View holder for Snap Helper list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final SnapHelperItemBinding dataBinding;
+        private final ItemSnapHelperBinding dataBinding;
 
-        ViewHolder(SnapHelperItemBinding dataBinding) {
+        ViewHolder(ItemSnapHelperBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

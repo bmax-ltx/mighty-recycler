@@ -9,8 +9,8 @@ import androidx.databinding.ViewDataBinding;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.ViewTypesItem1Binding;
-import com.lightricks.mightyrecycler.databinding.ViewTypesItem2Binding;
+import com.lightricks.mightyrecycler.databinding.ItemViewTypesFirstBinding;
+import com.lightricks.mightyrecycler.databinding.ItemViewTypesSecondBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -33,7 +33,7 @@ public class ViewTypesAdapter extends RecyclerView.Adapter<ViewTypesAdapter.View
 
     @Override
     public int getItemViewType(int position) {
-        return position % 2 == 0 ? R.layout.view_types_item_1 : R.layout.view_types_item_2;
+        return position % 2 == 0 ? R.layout.item_view_types_first : R.layout.item_view_types_second;
     }
 
     /** Adapter implementation */
@@ -69,10 +69,10 @@ public class ViewTypesAdapter extends RecyclerView.Adapter<ViewTypesAdapter.View
         }
 
         void setColor(MaterialColor color) {
-            if (dataBinding instanceof ViewTypesItem1Binding) {
-                ((ViewTypesItem1Binding) dataBinding).setColor(color);
-            } else if (dataBinding instanceof ViewTypesItem2Binding) {
-                ((ViewTypesItem2Binding) dataBinding).setColor(color);
+            if (dataBinding instanceof ItemViewTypesFirstBinding) {
+                ((ItemViewTypesFirstBinding) dataBinding).setColor(color);
+            } else if (dataBinding instanceof ItemViewTypesSecondBinding) {
+                ((ItemViewTypesSecondBinding) dataBinding).setColor(color);
             }
         }
     }

@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.StaggeredGridItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemStaggeredGridBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -35,7 +35,7 @@ public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdap
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.staggered_grid_item, parent, false));
+                R.layout.item_staggered_grid, parent, false));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdap
      * View holder for Staggered Grid Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final StaggeredGridItemBinding dataBinding;
+        private final ItemStaggeredGridBinding dataBinding;
 
-        ViewHolder(StaggeredGridItemBinding dataBinding) {
+        ViewHolder(ItemStaggeredGridBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

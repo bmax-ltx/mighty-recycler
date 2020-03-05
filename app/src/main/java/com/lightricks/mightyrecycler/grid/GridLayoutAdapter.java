@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.GridLayoutItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemGridLayoutBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -35,7 +35,7 @@ public class GridLayoutAdapter extends RecyclerView.Adapter<GridLayoutAdapter.Vi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.grid_layout_item, parent, false));
+                R.layout.item_grid_layout, parent, false));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class GridLayoutAdapter extends RecyclerView.Adapter<GridLayoutAdapter.Vi
      * View holder for Grid Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final GridLayoutItemBinding dataBinding;
+        private final ItemGridLayoutBinding dataBinding;
 
-        ViewHolder(GridLayoutItemBinding dataBinding) {
+        ViewHolder(ItemGridLayoutBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

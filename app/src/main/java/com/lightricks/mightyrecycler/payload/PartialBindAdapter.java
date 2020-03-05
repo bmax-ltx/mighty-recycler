@@ -9,7 +9,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.PartialBindItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemPartialBindBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -58,7 +58,7 @@ public class PartialBindAdapter extends RecyclerView.Adapter<PartialBindAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.partial_bind_item, parent, false));
+                R.layout.item_partial_bind, parent, false));
     }
 
     @Override
@@ -97,9 +97,9 @@ public class PartialBindAdapter extends RecyclerView.Adapter<PartialBindAdapter.
      * View holder for Partial Bind list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final PartialBindItemBinding dataBinding;
+        private final ItemPartialBindBinding dataBinding;
 
-        ViewHolder(PartialBindItemBinding dataBinding) {
+        ViewHolder(ItemPartialBindBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;

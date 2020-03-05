@@ -8,7 +8,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
-import com.lightricks.mightyrecycler.databinding.LinearListItemBinding;
+import com.lightricks.mightyrecycler.databinding.ItemLinearLayoutBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
 
 import java.util.Collections;
@@ -35,7 +35,7 @@ public class LinearLayoutAdapter extends RecyclerView.Adapter<LinearLayoutAdapte
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new ViewHolder(DataBindingUtil.inflate(LayoutInflater.from(parent.getContext()),
-                R.layout.linear_list_item, parent, false));
+                R.layout.item_linear_layout, parent, false));
     }
 
     @Override
@@ -53,9 +53,9 @@ public class LinearLayoutAdapter extends RecyclerView.Adapter<LinearLayoutAdapte
      * View holder for the Linear Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
-        private final LinearListItemBinding dataBinding;
+        private final ItemLinearLayoutBinding dataBinding;
 
-        ViewHolder(LinearListItemBinding dataBinding) {
+        ViewHolder(ItemLinearLayoutBinding dataBinding) {
             super(dataBinding.getRoot());
 
             this.dataBinding = dataBinding;
