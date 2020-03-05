@@ -52,13 +52,13 @@
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".animator.ItemAnimatorActivity"
-            android:label="@string/item_animator_label"
+            android:name=".sections.ViewTypesActivity"
+            android:label="@string/view_types_label"
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".sections.ViewTypesActivity"
-            android:label="@string/view_types_label"
+            android:name=".animator.ItemAnimatorActivity"
+            android:label="@string/item_animator_label"
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity

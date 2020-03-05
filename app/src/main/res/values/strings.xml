@@ -13,12 +13,12 @@
     <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
     <!-- Item Decoration -->
     <string name="item_decoration_label">Item Decoration</string>
+    <!-- View Types -->
+    <string name="view_types_label">View Types</string>
     <!-- Item Animator -->
     <string name="item_animator_label">Item Animator</string>
     <string name="add_label">Add</string>
     <string name="remove_label">Remove</string>
-    <!-- View Types -->
-    <string name="view_types_label">View Types</string>
     <!-- Partial Bind -->
     <string name="partial_bind_label">Partial Bind</string>
     <!-- Nested Scrolling -->

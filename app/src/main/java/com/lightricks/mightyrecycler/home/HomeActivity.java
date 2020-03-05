@@ -35,8 +35,8 @@ public class HomeActivity extends AppCompatActivity {
             R.string.snap_helper_label,
             R.string.drag_n_swipe_label,
             R.string.item_decoration_label,
-            R.string.item_animator_label,
             R.string.view_types_label,
+            R.string.item_animator_label,
             R.string.partial_bind_label,
             R.string.nested_scrolling_label,
     };
@@ -48,8 +48,8 @@ public class HomeActivity extends AppCompatActivity {
             SnapHelperActivity.class,
             DragAndSwipeActivity.class,
             ItemDecorationActivity.class,
-            ItemAnimatorActivity.class,
             ViewTypesActivity.class,
+            ItemAnimatorActivity.class,
             PartialBindActivity.class,
             NestedScrollingActivity.class,
     };
