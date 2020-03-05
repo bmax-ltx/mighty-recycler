@@ -16,7 +16,7 @@ import com.lightricks.mightyrecycler.decoration.ItemDecorationActivity;
 import com.lightricks.mightyrecycler.drag.DragAndSwipeActivity;
 import com.lightricks.mightyrecycler.grid.GridLayoutActivity;
 import com.lightricks.mightyrecycler.linear.LinearLayoutActivity;
-import com.lightricks.mightyrecycler.nested.NestedScrollingActivity;
+import com.lightricks.mightyrecycler.nested.NestedScrollActivity;
 import com.lightricks.mightyrecycler.payload.PartialBindActivity;
 import com.lightricks.mightyrecycler.sections.ViewTypesActivity;
 import com.lightricks.mightyrecycler.snap.SnapHelperActivity;
@@ -28,6 +28,9 @@ import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * Activity showing the Home screen
+ */
 public class HomeActivity extends AppCompatActivity {
     private int[] labelResIds = new int[] {
             R.string.linear_layout_label,
@@ -52,20 +55,20 @@ public class HomeActivity extends AppCompatActivity {
             ViewTypesActivity.class,
             ItemAnimatorActivity.class,
             PartialBindActivity.class,
-            NestedScrollingActivity.class,
+            NestedScrollActivity.class,
     };
-
-    private ActivityHomeBinding dataBinding;
 
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_home);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityHomeBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_home);
+
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,

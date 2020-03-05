@@ -13,18 +13,21 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 import com.lightricks.mightyrecycler.databinding.ActivityDragSwipeBinding;
 
+/**
+ * Activity showing the Drag & Swipe screen
+ */
 public class DragAndSwipeActivity extends AppCompatActivity {
-    private ActivityDragSwipeBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_drag_swipe);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityDragSwipeBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_drag_swipe);
+
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
         DragAndSwipeAdapter adapter = makeAdapter();

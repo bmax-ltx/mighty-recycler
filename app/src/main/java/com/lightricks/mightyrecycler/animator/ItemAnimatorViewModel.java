@@ -11,6 +11,9 @@ import com.lightricks.mightyrecycler.model.ColorPalette;
 
 import java.util.List;
 
+/**
+ * View Model for the Item Animator screen
+ */
 public class ItemAnimatorViewModel extends ViewModel {
     private final MutableLiveData<Boolean> isAddButtonEnabled = new MutableLiveData<>();
     private final MutableLiveData<Boolean> isRemoveButtonEnabled = new MutableLiveData<>();

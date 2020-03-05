@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Grid Layout list
+ */
 public class GridLayoutAdapter extends RecyclerView.Adapter<GridLayoutAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -47,7 +50,7 @@ public class GridLayoutAdapter extends RecyclerView.Adapter<GridLayoutAdapter.Vi
     }
 
     /**
-     * Grid Layout item view holder
+     * View holder for Grid Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final GridLayoutItemBinding dataBinding;

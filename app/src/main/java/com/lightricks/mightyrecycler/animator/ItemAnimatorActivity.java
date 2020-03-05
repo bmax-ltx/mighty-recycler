@@ -10,6 +10,9 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityItemAnimatorBinding;
 
+/**
+ * Activity showing the Item Animator screen.
+ */
 public class ItemAnimatorActivity extends AppCompatActivity {
     private ActivityItemAnimatorBinding dataBinding;
     private ItemAnimatorViewModel viewModel;
@@ -42,7 +45,7 @@ public class ItemAnimatorActivity extends AppCompatActivity {
         dataBinding.setVm(viewModel);
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
-        dataBinding.recyclerView.setItemAnimator(new ItemScaleAnimator());
+        dataBinding.recyclerView.setItemAnimator(new ScaleUpItemAnimator());
         dataBinding.recyclerView.setAdapter(adapter);
     }
 }

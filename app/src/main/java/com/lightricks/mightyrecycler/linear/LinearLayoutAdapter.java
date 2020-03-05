@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Linear Layout list
+ */
 public class LinearLayoutAdapter extends RecyclerView.Adapter<LinearLayoutAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -47,7 +50,7 @@ public class LinearLayoutAdapter extends RecyclerView.Adapter<LinearLayoutAdapte
     }
 
     /**
-     * Linear Layout item view holder
+     * View holder for the Linear Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final LinearListItemBinding dataBinding;

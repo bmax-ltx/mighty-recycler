@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.databinding.ClickableListItemBinding;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Clickable list
+ */
 public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdapter.ViewHolder> {
     private List<String> labels = Collections.emptyList();
     private ClickListener clickListener;
@@ -59,12 +62,15 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
         return labels.size();
     }
 
+    /**
+     * Handles click events
+     */
     public interface ClickListener {
         void onClick(int position, String label);
     }
 
     /**
-     * Clickable list item view holder
+     * View holder for Clickable list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final ClickableListItemBinding dataBinding;

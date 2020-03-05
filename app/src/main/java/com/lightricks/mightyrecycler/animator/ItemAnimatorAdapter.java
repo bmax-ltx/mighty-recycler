@@ -16,6 +16,9 @@ import com.lightricks.mightyrecycler.util.SimpleDiffCallback;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Adapter for the Item Animator list
+ */
 public class ItemAnimatorAdapter extends RecyclerView.Adapter<ItemAnimatorAdapter.ViewHolder> {
     private List<MaterialColor> colors = new ArrayList<>();
 
@@ -71,7 +74,7 @@ public class ItemAnimatorAdapter extends RecyclerView.Adapter<ItemAnimatorAdapte
     }
 
     /**
-     * Drag & Swipe item view holder
+     * View holder for Item Animation list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final ItemAnimatorItemBinding dataBinding;

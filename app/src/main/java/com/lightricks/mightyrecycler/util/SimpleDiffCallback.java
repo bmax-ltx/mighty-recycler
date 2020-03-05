@@ -5,6 +5,9 @@ import androidx.recyclerview.widget.DiffUtil;
 import java.util.List;
 import java.util.Objects;
 
+/**
+ * Helps to calculate the difference between two lists of identifiable objects.
+ */
 public class SimpleDiffCallback<T extends Identifiable> extends DiffUtil.Callback {
     private List<T> oldList;
     private List<T> newList;

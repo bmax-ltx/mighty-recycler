@@ -12,18 +12,21 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityPartialBindBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+/**
+ * Activity showing the Partial Bind screen
+ */
 public class PartialBindActivity extends AppCompatActivity {
-    private ActivityPartialBindBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_partial_bind);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityPartialBindBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_partial_bind);
+
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.addItemDecoration(new DividerItemDecoration(this,

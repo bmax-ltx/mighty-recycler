@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.databinding.DragSwipeItemBinding;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Drag & Swipe list
+ */
 public class DragAndSwipeAdapter extends RecyclerView.Adapter<DragAndSwipeAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -76,7 +79,7 @@ public class DragAndSwipeAdapter extends RecyclerView.Adapter<DragAndSwipeAdapte
     }
 
     /**
-     * Drag & Swipe item view holder
+     * View holder for Drag & Swipe list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final DragSwipeItemBinding dataBinding;

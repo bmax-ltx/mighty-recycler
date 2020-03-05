@@ -8,6 +8,9 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+/**
+ * Item Decoration drawing a stepper (line with dots) along the left edge of the list
+ */
 public class StepperDecoration extends RecyclerView.ItemDecoration {
     private Paint sidelinePaint;
     private int decorationWidth, circleRadius;

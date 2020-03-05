@@ -3,7 +3,10 @@ package com.lightricks.mightyrecycler.animator;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ItemScaleAnimator extends DefaultItemAnimator {
+/**
+ * Item Animator that applies a scale-up animation to the added items.
+ */
+public class ScaleUpItemAnimator extends DefaultItemAnimator {
     @Override
     public long getAddDuration() {
         return Constants.ADD_ANIMATION_DURATION_MS;
@@ -31,6 +34,7 @@ public class ItemScaleAnimator extends DefaultItemAnimator {
     @Override
     public void onAddFinished(RecyclerView.ViewHolder holder) {
         super.onAddFinished(holder);
+
         // Restore the properties after the animation.
         holder.itemView.setScaleX(Constants.SCALE_FULL);
         holder.itemView.setScaleY(Constants.SCALE_FULL);

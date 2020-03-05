@@ -11,20 +11,24 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityStaggeredGridBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+/**
+ * Activity showing the Staggered Grid Layout screen
+ */
 public class StaggeredGridActivity extends AppCompatActivity {
-    private ActivityStaggeredGridBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_staggered_grid);
         setupViews();
     }
 
     private void setupViews() {
-        dataBinding.recyclerView.setLayoutManager(new StaggeredGridLayoutManager(3,
-                StaggeredGridLayoutManager.VERTICAL));
+        ActivityStaggeredGridBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_staggered_grid);
+
+        dataBinding.recyclerView.setLayoutManager(
+                new StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL));
+
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
@@ -34,5 +38,4 @@ public class StaggeredGridActivity extends AppCompatActivity {
         adapter.setColors(palette.getRandomColors(150));
         return adapter;
     }
-
 }

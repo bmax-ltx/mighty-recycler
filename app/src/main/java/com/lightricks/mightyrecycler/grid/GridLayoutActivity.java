@@ -10,25 +10,28 @@ import android.os.Bundle;
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 import com.lightricks.mightyrecycler.databinding.ActivityGridLayoutBinding;
+import com.lightricks.mightyrecycler.util.OffsetItemDecoration;
 
+/**
+ * Activity showing the Grid Layout screen
+ */
 public class GridLayoutActivity extends AppCompatActivity {
-
-    private ActivityGridLayoutBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_grid_layout);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityGridLayoutBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_grid_layout);
+
         dataBinding.recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.setAdapter(makeAdapter());
         int space = getResources().getDimensionPixelSize(R.dimen.grid_spacing);
-        dataBinding.recyclerView.addItemDecoration(new SpacesItemDecoration(space));
+        dataBinding.recyclerView.addItemDecoration(new OffsetItemDecoration(space));
     }
 
     private RecyclerView.Adapter makeAdapter() {

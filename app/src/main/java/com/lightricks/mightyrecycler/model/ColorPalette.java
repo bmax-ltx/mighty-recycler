@@ -7,6 +7,9 @@ import java.util.stream.Collectors;
 
 import static java.util.stream.Collectors.toList;
 
+/**
+ * Collection of material design colors
+ */
 public class ColorPalette {
     private List<MaterialColor> allColors = new ArrayList<>();
     private Random random = new Random();

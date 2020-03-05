@@ -6,6 +6,9 @@ import com.lightricks.mightyrecycler.util.Identifiable;
 
 import java.util.Objects;
 
+/**
+ * Model of a Material Design color
+ */
 public class MaterialColor implements Identifiable {
     private final String name;
     private final String colorString;

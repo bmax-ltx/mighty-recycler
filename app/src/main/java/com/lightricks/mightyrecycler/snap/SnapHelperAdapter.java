@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Snap Helper list
+ */
 public class SnapHelperAdapter extends RecyclerView.Adapter<SnapHelperAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -47,7 +50,7 @@ public class SnapHelperAdapter extends RecyclerView.Adapter<SnapHelperAdapter.Vi
     }
 
     /**
-     * Snap Helper item view holder
+     * View holder for Snap Helper list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final SnapHelperItemBinding dataBinding;

@@ -12,25 +12,27 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityItemDecorationBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+/**
+ * Activity showing the Item Decoration screen.
+ */
 public class ItemDecorationActivity extends AppCompatActivity {
-    private ActivityItemDecorationBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_item_decoration);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityItemDecorationBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_item_decoration);
+
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
 
         int width = getResources().getDimensionPixelSize(R.dimen.sideline_width);
         int color = ContextCompat.getColor(this, R.color.colorPrimary);
         dataBinding.recyclerView.addItemDecoration(new StepperDecoration(width, color));
-
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 

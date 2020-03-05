@@ -12,18 +12,21 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 import com.lightricks.mightyrecycler.databinding.ActivityLinearLayoutBinding;
 
+/**
+ * Activity showing the Linear Layout screen
+ */
 public class LinearLayoutActivity extends AppCompatActivity {
-    private ActivityLinearLayoutBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_linear_layout);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityLinearLayoutBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_linear_layout);
+
         // Top Recycler View
         dataBinding.recyclerViewTop.setLayoutManager(
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));

@@ -14,6 +14,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Staggered Grid Layout list
+ */
 public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -47,7 +50,7 @@ public class StaggeredGridAdapter extends RecyclerView.Adapter<StaggeredGridAdap
     }
 
     /**
-     * Staggered Grid Layout item view holder
+     * View holder for Staggered Grid Layout list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final StaggeredGridItemBinding dataBinding;

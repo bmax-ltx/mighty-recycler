@@ -15,35 +15,44 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivitySnapHelperBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+/**
+ * Activity showing the Snap Helper screen
+ */
 public class SnapHelperActivity extends AppCompatActivity {
-    private ActivitySnapHelperBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_snap_helper);
         setupViews();
     }
 
     private void setupViews() {
+        ActivitySnapHelperBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_snap_helper);
+
         // Top Recycler View
         dataBinding.recyclerViewTop.setLayoutManager(
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        dataBinding.recyclerViewTop.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.HORIZONTAL));
+
+        dataBinding.recyclerViewTop.addItemDecoration(
+                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+
         dataBinding.recyclerViewTop.setHasFixedSize(true);
         dataBinding.recyclerViewTop.setAdapter(makeAdapter());
+
         SnapHelper linearSnapHelper = new LinearSnapHelper();
         linearSnapHelper.attachToRecyclerView(dataBinding.recyclerViewTop);
 
         // Bottom Recycler View
         dataBinding.recyclerViewBottom.setLayoutManager(
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
-        dataBinding.recyclerViewBottom.addItemDecoration(new DividerItemDecoration(this,
-                RecyclerView.HORIZONTAL));
+
+        dataBinding.recyclerViewBottom.addItemDecoration(
+                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+
         dataBinding.recyclerViewBottom.setHasFixedSize(true);
         dataBinding.recyclerViewBottom.setAdapter(makeAdapter());
+
         SnapHelper pagerSnapHelper = new PagerSnapHelper();
         pagerSnapHelper.attachToRecyclerView(dataBinding.recyclerViewBottom);
     }

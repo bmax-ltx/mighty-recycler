@@ -16,6 +16,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the View Types list
+ */
 public class ViewTypesAdapter extends RecyclerView.Adapter<ViewTypesAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
@@ -54,7 +57,7 @@ public class ViewTypesAdapter extends RecyclerView.Adapter<ViewTypesAdapter.View
     }
 
     /**
-     * Drag & Swipe item view holder
+     * View holder for View Types list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final ViewDataBinding dataBinding;

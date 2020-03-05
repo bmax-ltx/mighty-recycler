@@ -15,6 +15,9 @@ import com.lightricks.mightyrecycler.model.MaterialColor;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Adapter for the Partial Bind list
+ */
 public class PartialBindAdapter extends RecyclerView.Adapter<PartialBindAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
     private int selectedPosition = RecyclerView.NO_POSITION;
@@ -91,7 +94,7 @@ public class PartialBindAdapter extends RecyclerView.Adapter<PartialBindAdapter.
     }
 
     /**
-     * Partial bind item view holder
+     * View holder for Partial Bind list items
      */
     static class ViewHolder extends RecyclerView.ViewHolder {
         private final PartialBindItemBinding dataBinding;
@@ -127,7 +130,7 @@ public class PartialBindAdapter extends RecyclerView.Adapter<PartialBindAdapter.
     }
 
     /**
-     * Handles click events.
+     * Handles click events
      */
     interface ClickListener {
         void onClick(int position, MaterialColor color);

@@ -11,18 +11,21 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityViewTypesBinding;
 import com.lightricks.mightyrecycler.model.ColorPalette;
 
+/**
+ * Activity showing the View Types screen
+ */
 public class ViewTypesActivity extends AppCompatActivity {
-    private ActivityViewTypesBinding dataBinding;
-
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
 
-        dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_view_types);
         setupViews();
     }
 
     private void setupViews() {
+        ActivityViewTypesBinding dataBinding =
+                DataBindingUtil.setContentView(this, R.layout.activity_view_types);
+
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.setAdapter(makeAdapter());
