@@ -1,7 +1,6 @@
 package com.lightricks.mightyrecycler.nested;
 
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -27,11 +26,6 @@ public class NestedScrollActivity extends AppCompatActivity {
         setupViews();
     }
 
-    public void handleButtonClick(View view) {
-        boolean wasEnabled = dataBinding.recyclerView.isNestedScrollingEnabled();
-        dataBinding.recyclerView.setNestedScrollingEnabled(!wasEnabled);
-    }
-
     private void setupViews() {
         dataBinding = DataBindingUtil.setContentView(this, R.layout.activity_nested_scroll);
 
@@ -42,6 +36,9 @@ public class NestedScrollActivity extends AppCompatActivity {
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.setNestedScrollingEnabled(false);
         dataBinding.recyclerView.setAdapter(makeAdapter());
+
+        dataBinding.toggle.setOnCheckedChangeListener((btn, isChecked) ->
+                dataBinding.recyclerView.setNestedScrollingEnabled(isChecked));
     }
 
     private RecyclerView.Adapter makeAdapter() {
