@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ItemAnimatorItemBinding;
 import com.lightricks.mightyrecycler.model.MaterialColor;
+import com.lightricks.mightyrecycler.util.SimpleDiffCallback;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,7 +2,7 @@ package com.lightricks.mightyrecycler.model;
 
 import android.graphics.Color;
 
-import com.lightricks.mightyrecycler.animator.Identifiable;
+import com.lightricks.mightyrecycler.util.Identifiable;
 
 import java.util.Objects;
 

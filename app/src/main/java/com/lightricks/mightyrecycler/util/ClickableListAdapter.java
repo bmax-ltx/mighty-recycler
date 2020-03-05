@@ -1,4 +1,4 @@
-package com.lightricks.mightyrecycler.home;
+package com.lightricks.mightyrecycler.util;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -21,7 +21,7 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
     /**
      * Set the labels to display in the list.
      */
-    void setLabels(List<String> labels) {
+    public void setLabels(List<String> labels) {
         this.labels = labels;
 
         notifyDataSetChanged();
@@ -30,7 +30,7 @@ public class ClickableListAdapter extends RecyclerView.Adapter<ClickableListAdap
     /**
      * Set the click listener for list items.
      */
-    void setClickListener(ClickListener clickListener) {
+    public void setClickListener(ClickListener clickListener) {
         this.clickListener = clickListener;
     }
 

@@ -21,6 +21,7 @@ import com.lightricks.mightyrecycler.payload.PartialBindActivity;
 import com.lightricks.mightyrecycler.sections.ViewTypesActivity;
 import com.lightricks.mightyrecycler.snap.SnapHelperActivity;
 import com.lightricks.mightyrecycler.staggered.StaggeredGridActivity;
+import com.lightricks.mightyrecycler.util.ClickableListAdapter;
 
 import java.util.List;
 import java.util.stream.IntStream;

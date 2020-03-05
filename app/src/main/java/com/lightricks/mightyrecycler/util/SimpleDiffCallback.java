@@ -1,4 +1,4 @@
-package com.lightricks.mightyrecycler.animator;
+package com.lightricks.mightyrecycler.util;
 
 import androidx.recyclerview.widget.DiffUtil;
 
@@ -9,7 +9,7 @@ public class SimpleDiffCallback<T extends Identifiable> extends DiffUtil.Callbac
     private List<T> oldList;
     private List<T> newList;
 
-    SimpleDiffCallback(List<T> oldList, List<T> newList) {
+    public SimpleDiffCallback(List<T> oldList, List<T> newList) {
         this.oldList = oldList;
         this.newList = newList;
     }
