@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.databinding.ActivityItemAnimatorBinding;
@@ -23,20 +24,24 @@ public class ItemAnimatorActivity extends AppCompatActivity {
         super.onCreate(state);
 
         setupViewModel();
-        adapter = new ItemAnimatorAdapter();
+        setupAdapter();
         setupViews();
     }
 
     private void setupViewModel() {
-        viewModel = ViewModelProviders.of(this)
-                .get(ItemAnimatorViewModel.class);
+        viewModel = ViewModelProviders.of(this).get(ItemAnimatorViewModel.class);
+        viewModel.getMaterialColors().observe(this, colors -> adapter.setColors(colors));
+    }
 
-        viewModel.getMaterialColors()
-                .observe(this, colors -> {
-                    adapter.setColors(colors);
-                    int lastPosition = adapter.getItemCount() - 1;
-                    dataBinding.recyclerView.scrollToPosition(lastPosition);
-                });
+    private void setupAdapter() {
+        adapter = new ItemAnimatorAdapter();
+        adapter.registerAdapterDataObserver(new RecyclerView.AdapterDataObserver() {
+            @Override
+            public void onItemRangeInserted(int positionStart, int itemCount) {
+                int lastPosition = adapter.getItemCount() - 1;
+                dataBinding.recyclerView.scrollToPosition(lastPosition);
+            }
+        });
     }
 
     private void setupViews() {

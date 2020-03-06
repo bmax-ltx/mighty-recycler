@@ -6,47 +6,41 @@
             type="com.lightricks.mightyrecycler.animator.ItemAnimatorViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/constrains_layout"
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toTopOf="@id/button_add"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/add_label"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/double_margin"
+            android:src="@drawable/ic_add"
             android:enabled="@{vm.isAddButtonEnabled}"
-            android:onClick="@{vm::handleAddButtonClick}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/button_remove"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/recycler_view"/>
+            android:onClick="@{vm::handleAddButtonClick}"/>
 
-        <Button
-            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/button_remove"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/remove_label"
+            android:layout_gravity="bottom|start"
+            android:layout_margin="@dimen/double_margin"
+            android:src="@drawable/ic_remove"
             android:enabled="@{vm.isRemoveButtonEnabled}"
-            android:onClick="@{vm::handleRemoveButtonClick}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@id/button_add"
-            app:layout_constraintTop_toBottomOf="@id/recycler_view"/>
+            android:onClick="@{vm::handleRemoveButtonClick}"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
 </layout>
