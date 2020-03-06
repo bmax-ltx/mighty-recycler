@@ -42,8 +42,8 @@
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".drag.DragAndSwipeActivity"
-            android:label="@string/drag_n_swipe_label"
+            android:name=".drag.ItemTouchHelperActivity"
+            android:label="@string/item_touch_helper_label"
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity

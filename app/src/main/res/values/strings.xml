@@ -1,22 +1,26 @@
 <resources>
     <!-- Global -->
-    <string name="app_name">The Mighty Recycler View</string>
+    <string name="app_name">The Mighty RecyclerView</string>
     <!-- Linear Layout -->
-    <string name="linear_layout_label">Linear Layout</string>
+    <string name="linear_layout_label">Linear Layout Manager</string>
+    <string name="horizontal_orientation">Horizontal Orientation</string>
+    <string name="vertical_orientation">Vertical Orientation</string>
     <!-- Grid Layout -->
-    <string name="grid_layout_label">Grid Layout</string>
+    <string name="grid_layout_label">Grid Layout Manager</string>
     <!-- Staggered Grid -->
-    <string name="staggered_grid_label">Staggered Grid</string>
+    <string name="staggered_grid_label">Staggered Grid Layout Manager</string>
     <!-- Snap Helper -->
     <string name="snap_helper_label">Snap Helper</string>
+    <string name="linear_snap_helper">Linear Snap Helper</string>
+    <string name="pager_snap_helper">Pager Snap Helper</string>
     <!-- Drag & Swipe -->
-    <string name="drag_n_swipe_label">Drag &amp; Swipe</string>
+    <string name="item_touch_helper_label">Item Touch Helper</string>
     <!-- Item Decoration -->
-    <string name="item_decoration_label">Item Decoration</string>
+    <string name="item_decoration_label">Custom Item Decoration</string>
     <!-- View Types -->
-    <string name="view_types_label">View Types</string>
+    <string name="view_types_label">Multiple View Types</string>
     <!-- Item Animator -->
-    <string name="item_animator_label">Item Animator</string>
+    <string name="item_animator_label">Custom Item Animator</string>
     <string name="add_label">Add</string>
     <string name="remove_label">Remove</string>
     <!-- Partial Bind -->

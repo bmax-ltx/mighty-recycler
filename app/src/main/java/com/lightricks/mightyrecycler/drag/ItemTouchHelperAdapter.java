@@ -17,7 +17,7 @@ import java.util.List;
 /**
  * Adapter for the Drag & Swipe list
  */
-public class DragAndSwipeAdapter extends RecyclerView.Adapter<DragAndSwipeAdapter.ViewHolder> {
+public class ItemTouchHelperAdapter extends RecyclerView.Adapter<ItemTouchHelperAdapter.ViewHolder> {
     private List<MaterialColor> colors = Collections.emptyList();
 
     /**

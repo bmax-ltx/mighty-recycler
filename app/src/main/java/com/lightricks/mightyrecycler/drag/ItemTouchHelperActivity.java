@@ -16,7 +16,7 @@ import com.lightricks.mightyrecycler.databinding.ActivityDragSwipeBinding;
 /**
  * Activity showing the Drag & Swipe screen
  */
-public class DragAndSwipeActivity extends AppCompatActivity {
+public class ItemTouchHelperActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle state) {
         super.onCreate(state);
@@ -30,7 +30,7 @@ public class DragAndSwipeActivity extends AppCompatActivity {
 
         dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         dataBinding.recyclerView.setHasFixedSize(true);
-        DragAndSwipeAdapter adapter = makeAdapter();
+        ItemTouchHelperAdapter adapter = makeAdapter();
         dataBinding.recyclerView.setAdapter(adapter);
 
         final int DRAG_DIRS = ItemTouchHelper.UP | ItemTouchHelper.DOWN;
@@ -56,8 +56,8 @@ public class DragAndSwipeActivity extends AppCompatActivity {
         touchHelper.attachToRecyclerView(dataBinding.recyclerView);
     }
 
-    private DragAndSwipeAdapter makeAdapter() {
-        DragAndSwipeAdapter adapter = new DragAndSwipeAdapter();
+    private ItemTouchHelperAdapter makeAdapter() {
+        ItemTouchHelperAdapter adapter = new ItemTouchHelperAdapter();
         ColorPalette palette = new ColorPalette();
         adapter.setColors(palette.getRandomColors(100));
         return adapter;

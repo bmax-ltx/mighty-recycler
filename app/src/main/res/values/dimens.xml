@@ -2,6 +2,8 @@
 <resources>
     <!-- Global -->
     <dimen name="layout_margin">12dp</dimen>
+    <dimen name="half_margin">6dp</dimen>
+    <dimen name="section_header_text">20sp</dimen>
     <!-- Home Screen -->
     <dimen name="sideline_width">24dp</dimen>
     <!-- Grid Layout -->

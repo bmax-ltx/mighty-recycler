@@ -7,25 +7,49 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/linear_snap_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:layout_marginBottom="@dimen/half_margin"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:text="@string/linear_snap_helper"
+            android:textSize="@dimen/section_header_text"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_top"
+            app:layout_constraintStart_toStartOf="parent" />
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_top"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginBottom="2dp"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@+id/recycler_view_bottom"
+            app:layout_constraintTop_toBottomOf="@+id/linear_snap_helper"
+            app:layout_constraintBottom_toTopOf="@+id/pager_snap_helper"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/pager_snap_helper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/layout_margin"
+            android:layout_marginBottom="@dimen/half_margin"
+            android:layout_marginStart="@dimen/layout_margin"
+            android:text="@string/pager_snap_helper"
+            android:textSize="@dimen/section_header_text"
+            app:layout_constraintTop_toBottomOf="@+id/recycler_view_top"
+            app:layout_constraintBottom_toTopOf="@+id/recycler_view_bottom"
             app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_bottom"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginTop="2dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recycler_view_top"/>
+            app:layout_constraintTop_toBottomOf="@+id/pager_snap_helper"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

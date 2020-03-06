@@ -13,7 +13,7 @@ import com.lightricks.mightyrecycler.R;
 import com.lightricks.mightyrecycler.animator.ItemAnimatorActivity;
 import com.lightricks.mightyrecycler.databinding.ActivityHomeBinding;
 import com.lightricks.mightyrecycler.decoration.ItemDecorationActivity;
-import com.lightricks.mightyrecycler.drag.DragAndSwipeActivity;
+import com.lightricks.mightyrecycler.drag.ItemTouchHelperActivity;
 import com.lightricks.mightyrecycler.grid.GridLayoutActivity;
 import com.lightricks.mightyrecycler.linear.LinearLayoutActivity;
 import com.lightricks.mightyrecycler.nested.NestedScrollActivity;
@@ -37,7 +37,7 @@ public class HomeActivity extends AppCompatActivity {
             R.string.grid_layout_label,
             R.string.staggered_grid_label,
             R.string.snap_helper_label,
-            R.string.drag_n_swipe_label,
+            R.string.item_touch_helper_label,
             R.string.item_decoration_label,
             R.string.view_types_label,
             R.string.item_animator_label,
@@ -50,7 +50,7 @@ public class HomeActivity extends AppCompatActivity {
             GridLayoutActivity.class,
             StaggeredGridActivity.class,
             SnapHelperActivity.class,
-            DragAndSwipeActivity.class,
+            ItemTouchHelperActivity.class,
             ItemDecorationActivity.class,
             ViewTypesActivity.class,
             ItemAnimatorActivity.class,
