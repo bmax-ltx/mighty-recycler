@@ -52,7 +52,7 @@
             android:parentActivityName=".home.HomeActivity"/>
 
         <activity
-            android:name=".sections.ViewTypesActivity"
+            android:name=".types.ViewTypesActivity"
             android:label="@string/view_types_label"
             android:parentActivityName=".home.HomeActivity"/>
 

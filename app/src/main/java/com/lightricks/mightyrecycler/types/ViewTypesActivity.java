@@ -1,4 +1,4 @@
-package com.lightricks.mightyrecycler.sections;
+package com.lightricks.mightyrecycler.types;
 
 import android.os.Bundle;
 

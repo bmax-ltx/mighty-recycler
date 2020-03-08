@@ -18,7 +18,7 @@ import com.lightricks.mightyrecycler.grid.GridLayoutActivity;
 import com.lightricks.mightyrecycler.linear.LinearLayoutActivity;
 import com.lightricks.mightyrecycler.nested.NestedScrollActivity;
 import com.lightricks.mightyrecycler.payload.PartialBindActivity;
-import com.lightricks.mightyrecycler.sections.ViewTypesActivity;
+import com.lightricks.mightyrecycler.types.ViewTypesActivity;
 import com.lightricks.mightyrecycler.snap.SnapHelperActivity;
 import com.lightricks.mightyrecycler.staggered.StaggeredGridActivity;
 import com.lightricks.mightyrecycler.util.ClickableListAdapter;

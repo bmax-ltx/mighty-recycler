@@ -1,4 +1,4 @@
-package com.lightricks.mightyrecycler.sections;
+package com.lightricks.mightyrecycler.types;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
