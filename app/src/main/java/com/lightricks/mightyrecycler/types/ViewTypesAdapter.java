@@ -31,12 +31,12 @@ public class ViewTypesAdapter extends RecyclerView.Adapter<ViewTypesAdapter.View
         notifyDataSetChanged();
     }
 
+    /** Adapter implementation */
+
     @Override
     public int getItemViewType(int position) {
         return position % 2 == 0 ? R.layout.item_view_types_first : R.layout.item_view_types_second;
     }
-
-    /** Adapter implementation */
 
     @NonNull
     @Override
