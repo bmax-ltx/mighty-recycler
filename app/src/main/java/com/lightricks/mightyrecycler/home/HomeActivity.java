@@ -69,10 +69,11 @@ public class HomeActivity extends AppCompatActivity {
         ActivityHomeBinding dataBinding =
                 DataBindingUtil.setContentView(this, R.layout.activity_home);
 
-        dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        dataBinding.recyclerView.setLayoutManager(layoutManager);
         dataBinding.recyclerView.setHasFixedSize(true);
         dataBinding.recyclerView.addItemDecoration(
-                new DividerItemDecoration(this, RecyclerView.VERTICAL));
+                new DividerItemDecoration(this, layoutManager.getOrientation()));
 
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }

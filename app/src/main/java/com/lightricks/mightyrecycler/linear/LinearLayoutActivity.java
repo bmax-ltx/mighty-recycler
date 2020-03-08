@@ -28,19 +28,21 @@ public class LinearLayoutActivity extends AppCompatActivity {
                 DataBindingUtil.setContentView(this, R.layout.activity_linear_layout);
 
         // Top Recycler View
-        dataBinding.recyclerViewTop.setLayoutManager(
-                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        LinearLayoutManager layoutManagerTop =
+                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
+        dataBinding.recyclerViewTop.setLayoutManager(layoutManagerTop);
         dataBinding.recyclerViewTop.addItemDecoration(
-                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+                new DividerItemDecoration(this, layoutManagerTop.getOrientation()));
 
         dataBinding.recyclerViewTop.setHasFixedSize(true);
         dataBinding.recyclerViewTop.setAdapter(makeAdapter());
 
         // Bottom Recycler View
-        dataBinding.recyclerViewBottom.setLayoutManager(new LinearLayoutManager(this));
+        LinearLayoutManager layoutManagerBottom = new LinearLayoutManager(this);
+        dataBinding.recyclerViewBottom.setLayoutManager(layoutManagerBottom);
         dataBinding.recyclerViewBottom.addItemDecoration(
-                new DividerItemDecoration(this, RecyclerView.VERTICAL));
+                new DividerItemDecoration(this, layoutManagerBottom.getOrientation()));
 
         dataBinding.recyclerViewBottom.setHasFixedSize(true);
         dataBinding.recyclerViewBottom.setAdapter(makeAdapter());

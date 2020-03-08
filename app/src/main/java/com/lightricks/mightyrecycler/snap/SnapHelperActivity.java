@@ -31,11 +31,12 @@ public class SnapHelperActivity extends AppCompatActivity {
                 DataBindingUtil.setContentView(this, R.layout.activity_snap_helper);
 
         // Top Recycler View
-        dataBinding.recyclerViewTop.setLayoutManager(
-                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        LinearLayoutManager layoutManagerTop =
+                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
+        dataBinding.recyclerViewTop.setLayoutManager(layoutManagerTop);
         dataBinding.recyclerViewTop.addItemDecoration(
-                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+                new DividerItemDecoration(this, layoutManagerTop.getOrientation()));
 
         dataBinding.recyclerViewTop.setHasFixedSize(true);
         dataBinding.recyclerViewTop.setAdapter(makeAdapter());
@@ -44,11 +45,12 @@ public class SnapHelperActivity extends AppCompatActivity {
         linearSnapHelper.attachToRecyclerView(dataBinding.recyclerViewTop);
 
         // Bottom Recycler View
-        dataBinding.recyclerViewBottom.setLayoutManager(
-                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false));
+        LinearLayoutManager layoutManagerBottom =
+                new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
 
+        dataBinding.recyclerViewBottom.setLayoutManager(layoutManagerBottom);
         dataBinding.recyclerViewBottom.addItemDecoration(
-                new DividerItemDecoration(this, RecyclerView.HORIZONTAL));
+                new DividerItemDecoration(this, layoutManagerBottom.getOrientation()));
 
         dataBinding.recyclerViewBottom.setHasFixedSize(true);
         dataBinding.recyclerViewBottom.setAdapter(makeAdapter());
