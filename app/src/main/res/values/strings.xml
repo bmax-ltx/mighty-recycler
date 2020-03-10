@@ -19,6 +19,7 @@
     <string name="item_decoration_label">Custom Item Decoration</string>
     <!-- View Types -->
     <string name="view_types_label">Multiple View Types</string>
+    <string name="android_icon">Android icon</string>
     <!-- Item Animator -->
     <string name="item_animator_label">Custom Item Animator</string>
     <string name="add_label">Add</string>

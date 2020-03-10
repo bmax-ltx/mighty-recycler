@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -26,15 +27,18 @@ public class ViewTypesActivity extends AppCompatActivity {
         ActivityViewTypesBinding dataBinding =
                 DataBindingUtil.setContentView(this, R.layout.activity_view_types);
 
-        dataBinding.recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        dataBinding.recyclerView.setHasFixedSize(true);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(this);
+        dataBinding.recyclerView.setLayoutManager(layoutManager);
+        dataBinding.recyclerView.addItemDecoration(
+                new DividerItemDecoration(this, layoutManager.getOrientation()));
+
         dataBinding.recyclerView.setAdapter(makeAdapter());
     }
 
     private RecyclerView.Adapter makeAdapter() {
         ViewTypesAdapter adapter = new ViewTypesAdapter();
         ColorPalette palette = new ColorPalette();
-        adapter.setColors(palette.getAllColors());
+        adapter.setColors(palette.getRandomColors(25));
         return adapter;
     }
 }
